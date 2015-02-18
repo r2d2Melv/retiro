@@ -1,0 +1,1 @@
+json.extract! @afiliado, :id, :codigo, :nombre, :apellido, :genero, :edad, :estado_civil, :string, :tipo_id, :no_id, :direccion1, :direccion2, :ciudad, :municipio, :departamento, :pais, :actividad, :created_at, :updated_at

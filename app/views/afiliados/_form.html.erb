@@ -1,0 +1,136 @@
+<%= form_for @afiliado, :html => { :class => "form-horizontal afiliado" } do |f| %>
+
+    <% if @afiliado.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@afiliado.errors.count, "error") %> prohibited this afiliado from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @afiliado.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :codigo, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :codigo, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:codigo]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :nombre, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nombre, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:nombre]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :apellido, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :apellido, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:apellido]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :genero, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :genero, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:genero]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :edad, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :edad, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:edad]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :estado_civil, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :estado_civil, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:estado_civil]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :string, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :string, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:string]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :tipo_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tipo_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:tipo_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :no_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :no_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:no_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :direccion1, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :direccion1, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:direccion1]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :direccion2, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :direccion2, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:direccion2]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :ciudad, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :ciudad, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:ciudad]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :municipio, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :municipio, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:municipio]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :departamento, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :departamento, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:departamento]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :pais, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :pais, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:pais]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :actividad, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :actividad, :class => 'form-control' %>
+    </div>
+    <%= error_span(@afiliado[:actividad]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            afiliados_path, :class => 'btn btn-default' %>
+
+<% end %>

@@ -1,0 +1,49 @@
+<%- model_class = Afiliado -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:codigo) %>:</strong></dt>
+  <dd><%= @afiliado.codigo %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:nombre) %>:</strong></dt>
+  <dd><%= @afiliado.nombre %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:apellido) %>:</strong></dt>
+  <dd><%= @afiliado.apellido %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:genero) %>:</strong></dt>
+  <dd><%= @afiliado.genero %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:edad) %>:</strong></dt>
+  <dd><%= @afiliado.edad %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:estado_civil) %>:</strong></dt>
+  <dd><%= @afiliado.estado_civil %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:string) %>:</strong></dt>
+  <dd><%= @afiliado.string %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipo_id) %>:</strong></dt>
+  <dd><%= @afiliado.tipo_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:no_id) %>:</strong></dt>
+  <dd><%= @afiliado.no_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:direccion1) %>:</strong></dt>
+  <dd><%= @afiliado.direccion1 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:direccion2) %>:</strong></dt>
+  <dd><%= @afiliado.direccion2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:ciudad) %>:</strong></dt>
+  <dd><%= @afiliado.ciudad %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:municipio) %>:</strong></dt>
+  <dd><%= @afiliado.municipio %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:departamento) %>:</strong></dt>
+  <dd><%= @afiliado.departamento %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pais) %>:</strong></dt>
+  <dd><%= @afiliado.pais %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:actividad) %>:</strong></dt>
+  <dd><%= @afiliado.actividad %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              afiliados_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_afiliado_path(@afiliado), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              afiliado_path(@afiliado),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
