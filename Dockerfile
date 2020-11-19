@@ -1,0 +1,13 @@
+FROM
+
+WORKDIR
+
+COPY
+
+RUN
+
+EXPOSE
+
+CMD
+
+COPY
